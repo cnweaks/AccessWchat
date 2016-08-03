@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">辅助营销</string>
+
+    <string name="action_settings">设置</string>
+    <string name="accessibility_service_label">服务</string>
+    <string name="accessibility_service_description">本软件为微营销自动化辅助工具
+        \n软件运行方式:\n
+        通过从视图遍历控件位置ID，及关键字来确定所需要进行的操作\n，
+        软件目前实现的功能:\n
+        1,定时群发指定的消息内容(QQ轻聊版，微信6.3.x版本以上)\n
+        2,确定到群友列表，将实现全自动添加群友为好友\n
+        为使得软件正常使用请安装QQ轻聊版和微信6.3.9\n
+        
+        
+        后续待接入功能:\n
+        实现全天候自动管理，整理群友
+        \n实现检索消息内容，帮助提取有需要的客户取得及时联系
+        \n
+        \n
+        \n
+        软件作者:cnweaks Ecvit蛋蛋
+        
+        </string>
+
+    <string name="SendToMessage">软件测试消息，无需理会，谢谢[-_-]</string>
+</resources>

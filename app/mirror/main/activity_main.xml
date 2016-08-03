@@ -1,0 +1,12 @@
+<!-- [ Mirror metadata ] generatedAt: 1432114922442 -->
+<!--  屏幕生成文件。 与填充id标签下面的内容用来填充您的预览布局。 一个完整的规范示例数据，请参阅 http://jimulabs.com/sample-data-specifications/ 
+
+有效属性 <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_main">
+        <!-- TextView Examples:
+        <textview text="@string/string_resource" />
+        <textview text="Text literal" textSize="14sp" /> -->
+        <textview />
+    </_content>
+</screen>

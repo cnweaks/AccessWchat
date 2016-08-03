@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="24.0.0"><source path="F:\AndroidProjects\0Travel\AutoFriendly\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\assets"/></dataSet><dataSet config="main"><source path="F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\assets"/></dataSet><dataSet config="debug"><source path="F:\AndroidProjects\0Travel\AutoFriendly\app\src\debug\assets"/></dataSet></merger>

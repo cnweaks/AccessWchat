@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:3:5-26
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:4:5-63
+	android:versionCode
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:6:5-72
+	android:name
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:6:22-70
+application
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:8:5-26:19
+MERGED from [com.android.support:support-v4:24.0.0] F:\AndroidProjects\0Travel\AutoFriendly\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:12:9-41
+	android:allowBackup
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:10:9-35
+	android:icon
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:11:9-43
+	android:name
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:9:9-52
+service#com.auto.mm.AccessService
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:13:9-23:19
+	android:label
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:15:13-64
+	android:permission
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:16:13-79
+	android:name
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:14:13-42
+intent-filter#android.accessibilityservice.AccessibilityService
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:17:13-19:29
+action#android.accessibilityservice.AccessibilityService
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:18:17-91
+	android:name
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:18:25-89
+meta-data#android.accessibilityservice
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:20:13-22:71
+	android:resource
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:21:17-60
+uses-permission#android.permission.BIND_ACCESSIBILITY_SERVICE
+ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:24:9-88
+	android:name
+		ADDED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml:24:26-86
+uses-sdk
+INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:support-v4:24.0.0] F:\AndroidProjects\0Travel\AutoFriendly\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:24.0.0] F:\AndroidProjects\0Travel\AutoFriendly\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProjects\0Travel\AutoFriendly\app\src\main\AndroidManifest.xml

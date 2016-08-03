@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\AndroidProjects\\0Travel\\AutoFriendly\\app\\build\\intermediates\\res\\merged\\debug\\xml\\accessibility_service_config.xml",
+        "source": "F:\\AndroidProjects\\0Travel\\AutoFriendly\\app\\src\\main\\res\\xml\\accessibility_service_config.xml"
+    },
+    {
+        "merged": "F:\\AndroidProjects\\0Travel\\AutoFriendly\\app\\build\\intermediates\\res\\merged\\debug\\xml\\accessibility_demo_config.xml",
+        "source": "F:\\AndroidProjects\\0Travel\\AutoFriendly\\app\\src\\main\\res\\xml\\accessibility_demo_config.xml"
+    }
+]
