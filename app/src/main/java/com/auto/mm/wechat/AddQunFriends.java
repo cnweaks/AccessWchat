@@ -10,7 +10,7 @@ import com.auto.mm.util.ShellUtils;
 import java.util.List;
 import com.auto.mm.database.Contact;
 
-public class AddQunFriends {
+public class AddQunFriends{
 
         private static final String TAG = "Access";
 
@@ -21,14 +21,10 @@ public class AddQunFriends {
         item = true ,//群列表
         isclickHome = true,
         isroom = true;
-        
+
         public Context context;
         public static String ID_EDIT = "com.tencent.mm:id/nc";//编辑框，添加时
         public static String ID_BACK = "com.tencent.mm:id/c69";//返回按钮
-
-
-
-
         public static String ID_VOIDESAY = "com.tencent.mm:id/a7r";//视频聊天
         public static String ID_SEND = "com.tencent.mm:id/cf8";//发送
         public static String ID_LIST = "com.tencent.mm:id/au_";//群成员列表
@@ -36,7 +32,7 @@ public class AddQunFriends {
         public static String ID_TOQUN = "com.tencent.mm:id/dn";//进入群信息
 
         public static AccessServiceUtil util = new AccessServiceUtil();
-        
+
 
 
         public String StartCmds(){
@@ -74,7 +70,7 @@ public class AddQunFriends {
                 List<AccessibilityNodeInfo> list =
                     util.findNodesByText(info, str);
                 if (list.get(0).isClickable()){
-                    util.click(list.get(0));
+                        util.click(list.get(0));
                     }else{
                         Log.i(TAG , "不可点击");
                     }
@@ -82,35 +78,35 @@ public class AddQunFriends {
 
 
 
-        private void findNodeInfosByName(AccessibilityNodeInfo nodeInfo, String name) {
-                if(name.equals(nodeInfo.getClassName())) {
+        private void findNodeInfosByName(AccessibilityNodeInfo nodeInfo, String name){
+                if (name.equals(nodeInfo.getClassName())){
                         return;
                     }
-                for(int i = 0; i < nodeInfo.getChildCount(); i++) {
+                for (int i = 0; i < nodeInfo.getChildCount(); i++){
                         findNodeInfosByName(nodeInfo.getChild(i), name);
                     }
             }
 
 
         public void AddFriendly(AccessibilityNodeInfo acno){
-                
+
                 List<AccessibilityNodeInfo> list = 
                     util.findNodesByViewId(acno , ID_EDIT);
                 if (!list.isEmpty()){
-                    util.Fcus(list.get(0));
-                    util.paste(list.get(0));
+                        util.Fcus(list.get(0));
+                        util.paste(list.get(0));
                         Log.i(TAG, list.get(0).getInputType() + "<---编辑框");
                         List<AccessibilityNodeInfo> li = util.findNodesByText(acno, "发送");
                         if (!li.isEmpty()){
                                 Log.i(TAG , li.get(1).getText() + "<---发送"); 
                                 util.click(li.get(1));
-                           
+
                             }   
                     }else{
                         Log.i(TAG , "没有找到编辑框, 跳过内容编辑");
                     }
-                    
-                
+
+
 
             }   
 
