@@ -78,7 +78,7 @@ public class AccessService extends AccessibilityService{
         public static String ID_MSGEDIT = "com.tencent.mm:id/yq";//消息编辑框
         public static String ID_TITLE = "com.tencent.mm:id/cg_";//聊天窗口标题(名称)
         public static  final String TAG = "Access";
-        public static String[] MSG_QUN = {"测试群(3)" , "A00"};
+        public static String[] MSG_QUN = {"测试群(3)" , "快联支付"};
         
         public static QQLitesAccess lite = new QQLitesAccess();
         public static WechatAccess wechat = new WechatAccess();

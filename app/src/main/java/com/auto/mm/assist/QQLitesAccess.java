@@ -9,20 +9,14 @@ import com.auto.mm.util.ShellUtils;
 import java.util.List;
 
 public class QQLitesAccess implements IAccessServiceImpl{
-
         @Override
-        public void onInterrupt(){
-                
+        public void onInterrupt(){             
             }
 
         @Override
-        public boolean isCompleted(){
-                
+        public boolean isCompleted(){            
                 return false;
             }
-        
-
-
         //QQLite界面段，类名
         public static String QQ_MSGTABLE = "SplashActivity";//消息栏目
         public static String QQ_LIST = "TroopAssistantActivity";//群列表栏目
@@ -55,194 +49,7 @@ public class QQLitesAccess implements IAccessServiceImpl{
 
         private static int all = 0 , i = 0;
 
-    
-    
-       /* 
-        public void onAccessibilityEvent(AccessibilityEvent event){     
-                if (event.getPackageName().equals(PACKEG_WX) ||
-                    event.getPackageName().equals(PACKEG_QQ)){             
-                        String eventType = "";
-                        switch (event.getEventType()){          
-                                case event.TYPE_NOTIFICATION_STATE_CHANGED:
-                                    eventType = " 状态栏变化";
-                                    List<CharSequence> texts = event.getText();
-                                    if (!texts.isEmpty()){
-                                            String message = texts.get(0).toString();
 
-                                            //过滤微信内部通知消息
-                                            if (isInside(message)){
-                                                    return;
-                                                }
-
-                                            StaticData.total++;
-                                            setData(message);
-
-                                            //Log.i("demo", "收到通知栏消息:" + message);
-                                            //收到信息发送更新锁屏界面广
-                                            //  Intent i = new Intent("com.auto.mm.SHOW_ACTION");
-                                            //  sendBroadcast(i);
-
-                                            if (!StaticData.auto)
-                                                return;
-
-                                            //微信的两种通知消息类型，mode=1为详细内容，mode=2为通用类型
-                                            if (message.equals("微信：你收到了一条消息。"))
-                                                mode = 2;
-                                            else
-                                                mode = 1;
-                                            //判断是否指定好友并进行过滤
-                                            if (StaticData.isfriend && (mode == 1) && (!message.split(":")[0].equals(StaticData.friend))){
-                                                    Log.i("demo", "不匹配"); 
-                                                    return;
-                                                }
-
-                                            //模拟打开通知栏消息  
-                                            if (event.getParcelableData() != null && event.getParcelableData() instanceof Notification){
-                                                    Log.i("demo", "标题栏canReply=true");
-                                                    canReply = true;
-                                                    //   sende.wakeAndUnlock(true);
-                                                    SetClipData("你好，你是哪位?");
-                                                    try{
-                                                            Notification notification = (Notification) event.getParcelableData();  
-                                                            PendingIntent pendingIntent = notification.contentIntent;  
-                                                            pendingIntent.send();
-                                                        }catch (PendingIntent.CanceledException e){  
-                                                            e.printStackTrace();  
-                                                        }
-                                                }
-                                            break;
-                                        }
-
-
-                                    break;
-
-                                case event.TYPE_VIEW_CLICKED:
-                                    eventType = " 点击视图";
-                                    AccessibilityNodeInfo ifd =  event.getSource();
-                                    List<AccessibilityNodeInfo> nodes = util.findNodesByText(event.getSource() , ".心知道");
-                                    if (!nodes.isEmpty()){
-                                            Log.i(TAG, nodes.get(0).getViewIdResourceName() + "找到的资源ID");   
-                                        }
-                                    if (ifd != null){
-                                            CharSequence ids = ifd .getViewIdResourceName(); 
-                                            Log.i(TAG , ids + "==点击的ID");
-                                        }
-                                    break;
-                                case event.TYPE_VIEW_LONG_CLICKED:
-                                    eventType = " 长安视图";
-                                    List<AccessAction> acs = new ArrayList<AccessAction>();
-                                    new AccessAction(AccessAction.KeyType.TEXT, "微信" , AccessibilityEvent.TYPE_ANNOUNCEMENT , "你好");
-                                    new OpenApp("com.tencen2.mm", acs);
-                                    break;
-                                case event.TYPE_VIEW_SELECTED:
-                                    eventType = " 选择视图";
-                                    break;
-                                case event.TYPE_VIEW_FOCUSED:
-                                    eventType = " 视图变化";
-                                    if (event.getPackageName().equals(PACKEG_QQ)){
-                                            lite.Acest(event , this);
-                                        }else{
-                                            wechat.Acest(event , this);
-                                            SetClipData(SENDCONTEXT);     
-                                        }
-                                    break;
-                                case event.TYPE_VIEW_TEXT_CHANGED:
-                                    eventType = " 文字改变";
-                                    break;
-                                case event.TYPE_WINDOW_STATE_CHANGED:
-                                    if (event.getPackageName().equals(PACKEG_QQ)){
-
-                                            lite.Acest(event , this);
-                                        }else{
-                                            wechat.Acest(event , this);
-                                        }
-                                    eventType = " 窗口变化";
-                                    break;
-
-                                case event.TYPE_VIEW_HOVER_ENTER:
-                                    eventType = " 键盘弹出";
-                                    break;
-                                case event.TYPE_VIEW_HOVER_EXIT:                         
-                                    eventType = " 输入法退出";
-                                    break;
-                                case event.TYPE_TOUCH_EXPLORATION_GESTURE_START:
-                                    eventType = " 开始触摸";
-                                    break;
-                                case event.TYPE_TOUCH_EXPLORATION_GESTURE_END:
-                                    eventType = " 触摸结束";
-                                    break;
-                                case event.TYPE_WINDOW_CONTENT_CHANGED:
-                                    if (event.getPackageName().equals(PACKEG_WX)){
-                                            wechat.Acest(event , this);
-                                            Log.i(TAG , "窗口内容吊起微信");
-                                        }
-                                    if (canReply){
-                                            canReply = false;
-                                            sende.MessageInput(event.getSource());
-                                            //    sende.performBack(this);
-                                        }
-                                    Log.i(TAG , event.getText() + "<<<结果查询");    
-                                    //   if(event.getClassName().toString().contains("SeeRoomMemberUI")){
-
-                                    //     List<AccessibilityNodeInfo> list1 = event.getSource().findAccessibilityNodeInfosByText("");
-                                    //  if( !list1.isEmpty() )
-                                    //Log.i(TAG , list1.get(0).getText()+"<<<结果查询");
-                                    //       }     
-
-
-                                    eventType = " 窗口内容改变";
-                                    break;
-                                case event.TYPE_VIEW_SCROLLED:
-                                    eventType = " 创建视图";
-                                    CharSequence chat =  event.getPackageName(); 
-                                    if (chat.length() > 1){
-
-                                            if (chat.equals(PACKEG_WX)){
-                                                    wechat.Acest(event , this); 
-                                                }
-                                        }
-                                    break;
-                                case event.TYPE_VIEW_TEXT_SELECTION_CHANGED:
-                                    eventType = " 选择改变";
-                                    break;
-                                case event.TYPE_ANNOUNCEMENT:
-                                    eventType = " 网络连接";
-
-                                    break;
-                                case event.TYPE_VIEW_TEXT_TRAVERSED_AT_MOVEMENT_GRANULARITY:
-                                    eventType = " 文本移动";
-                                    break;
-                                case event.TYPE_GESTURE_DETECTION_START:
-                                    eventType = " 访客开始";
-                                    break;
-                                case event.TYPE_GESTURE_DETECTION_END:
-                                    eventType = " 访客结束";
-                                    break;
-                                case event.TYPE_TOUCH_INTERACTION_START:
-                                    eventType = " 开始联网";
-                                    break;
-                                case event.TYPE_TOUCH_INTERACTION_END:
-                                    eventType = " 联网结束";     
-                                    break;
-                                case event.TYPE_VIEW_CONTEXT_CLICKED:
-                                    eventType = " 未知活动";
-                                    break;
-                            }           
-                        Log.i(TAG, "事件类型: " + eventType);
-                    }
-                for (IAccessServiceImpl impl : impls){
-                        impl.Acest(event, this);
-                    }
-                Iterator<IAccessServiceImpl> iterator = impls.iterator();
-                while (iterator.hasNext()){
-                        if (iterator.next().isCompleted()){
-                                iterator.remove();
-                            }
-                    }
-            }
-        
-      */  
-        
         public void Acest(AccessibilityEvent event , AccessibilityService services){
                 String eventType = "";
                 switch (event.getEventType()){          
